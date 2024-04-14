@@ -1,0 +1,43 @@
+.layout {
+  display: grid;
+  grid-template-areas:
+    'h'
+    'm'
+    'f';
+  grid-template-columns: 100%;
+  grid-template-rows: 90px 1fr 90px;
+  column-gap: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+.has-aside {
+  grid-template-areas:
+    'h h h'
+    'a m m'
+    'f f f';
+  grid-template-rows: 90px 1fr 90px;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 35px;
+}
+
+header {
+  grid-area: h;
+}
+
+aside {
+  grid-area: a;
+  border-radius: 15px;
+  width: 100%;
+  position: sticky;
+  top: 75px;
+}
+
+main {
+  grid-area: m;
+  width: 100%;
+}
+
+footer {
+  grid-area: f;
+}
