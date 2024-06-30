@@ -11,7 +11,7 @@ const Aside: FC = () => {
     <div className={b()}>
       <div className={b('header')}>
         <FaFilter className={b('icon')} />
-        <div className={b('title')}>Filter</div>
+        <div className={b('title')}>Фильтр</div>
       </div>
       <div className={b('menu')}>Filter Menu</div>
     </div>

@@ -1,6 +1,7 @@
 import { FC, useEffect } from 'react'
 import { block } from 'bem-cn'
-import { useGetProductsQuery } from '../../../store/api/api'
+import { useGetProductsQuery } from '../../store/api/api'
+import Product from '../Product/view/Product'
 
 import './App.less'
 
@@ -23,12 +24,7 @@ const App: FC = () => {
     <div className={b()}>
       <h1 className={b('title')}>Список продуктов</h1>
       <ul className={b('list')}>
-        {data &&
-          data.map((product) => (
-            <li key={product.id} className={b('item')}>
-              {product.name} - {product.amount}
-            </li>
-          ))}
+        {data && data.map((product) => <Product product={product} key={product.id} />)}
       </ul>
     </div>
   )
