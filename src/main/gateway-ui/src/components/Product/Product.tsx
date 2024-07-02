@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { IProduct } from '../../../types'
 import { block } from 'bem-cn'
+import { IProduct } from '../../types'
 
 import './Product.less'
 

@@ -1,22 +1,28 @@
 import { FC, useEffect } from 'react'
 import { block } from 'bem-cn'
-import { useGetProductsQuery } from '../../store/api/api'
-import Product from '../Product/view/Product'
+import { useGetProductsQuery, useGetUsersQuery } from '../../store/api/api'
+import Product from '../Product/Product'
 
 import './App.less'
+import User from '../User/User'
 
 const b = block('app')
 
 const App: FC = () => {
-  const { data, error, isLoading } = useGetProductsQuery()
+  const {
+    data: productsList,
+    error: productsError,
+    isLoading: productsIsLoading,
+  } = useGetProductsQuery()
+  const { data: usersList, error: usersError, isLoading: usersIsLoading } = useGetUsersQuery()
 
   useEffect(() => {
-    if (error) {
-      console.error('Ошибка загрузки данных:', error)
+    if (productsError || usersError) {
+      console.error('Ошибка загрузки данных:', productsError)
     }
-  }, [error])
+  }, [productsError])
 
-  if (isLoading) {
+  if (productsIsLoading || usersIsLoading) {
     return <div className={b('loader')}>Загрузка...</div>
   }
 
@@ -24,7 +30,9 @@ const App: FC = () => {
     <div className={b()}>
       <h1 className={b('title')}>Список продуктов</h1>
       <ul className={b('list')}>
-        {data && data.map((product) => <Product product={product} key={product.id} />)}
+        {productsList &&
+          productsList.map((product) => <Product product={product} key={product.id} />)}
+        {usersList && usersList.map((user) => <User user={user} key={user.id} />)}
       </ul>
     </div>
   )

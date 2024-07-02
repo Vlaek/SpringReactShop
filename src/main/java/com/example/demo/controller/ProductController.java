@@ -44,7 +44,7 @@ public class ProductController {
     }
 
     private ResponseEntity<ProductEntity> mappingResponseProduct(ProductEntity product) {
-        return  new ResponseEntity<>(product, HttpStatus.OK);
+        return new ResponseEntity<>(product, HttpStatus.OK);
     }
 
     private ResponseEntity<List<ProductEntity>> mappingResponseListProduct(List<ProductEntity> products) {
