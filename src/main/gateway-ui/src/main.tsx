@@ -4,7 +4,8 @@ import MainContainer from "./containers/MainContainer/MainContainer";
 import MainPage from "./pages/MainPage/MainPage";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./styles/index.less";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -13,6 +14,18 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <MainContainer>
         <MainPage />
       </MainContainer>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </Provider>
   </React.StrictMode>
 );

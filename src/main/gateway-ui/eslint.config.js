@@ -26,10 +26,5 @@ export default [
       browser: true,
       node: true,
     },
-    // overrides: [
-    //   {
-    //     files:
-    //   }
-    // ]
   },
 ];

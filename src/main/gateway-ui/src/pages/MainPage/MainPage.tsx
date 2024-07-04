@@ -1,9 +1,7 @@
 import { FC } from "react";
-import Layout from "../../containers/Layout/Layout";
-import Header from "../../components/Header/Header";
-import App from "../../components/App/App";
-import Footer from "../../components/Footer/Footer";
-import Aside from "../../components/Aside/Aside";
+import App from "@/components/App/App";
+import Layout from "@/containers/Layout/Layout";
+import { Aside, Footer, Header } from "@/shared/components";
 
 const MainPage: FC = () => {
   return (

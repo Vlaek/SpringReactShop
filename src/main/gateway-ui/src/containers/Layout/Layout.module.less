@@ -4,21 +4,22 @@
     "h"
     "m"
     "f";
-  grid-template-columns: 100%;
+  grid-template-columns: 1fr;
   grid-template-rows: 90px 1fr 90px;
   column-gap: 0;
   width: 100%;
   min-height: 100%;
+  transition: all 0.3s ease;
 }
 
 .has_aside {
   grid-template-areas:
-    "h h h"
-    "a m m"
-    "f f f";
+    "h h h h"
+    "a m m m"
+    "f f f f";
   grid-template-rows: 90px 1fr 90px;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 35px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  transition: all 0.3s ease;
 }
 
 header {

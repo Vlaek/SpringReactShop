@@ -14,4 +14,4 @@ const Aside: FC = () => {
   );
 };
 
-export default Aside;
+export { Aside };

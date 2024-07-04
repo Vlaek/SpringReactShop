@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { IProduct } from "../../types";
 import styles from "./Product.module.less";
+import { IProduct } from "@/types";
 
 interface IProductProps {
   product: IProduct;
@@ -20,4 +20,4 @@ const Product: FC<IProductProps> = (props) => {
   );
 };
 
-export default Product;
+export { Product };
