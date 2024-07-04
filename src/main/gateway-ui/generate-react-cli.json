@@ -13,7 +13,8 @@
       "withLazy": false,
       "customTemplates": {
         "component": "templates/default/TemplateName.tsx",
-        "style": "templates/default/TemplateName.module.less"
+        "style": "templates/default/TemplateName.module.less",
+        "test": "templates/default/TemplateName.test.tsx"
       }
     }
   }

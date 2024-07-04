@@ -1,27 +1,23 @@
-import { FC } from 'react'
-import { block } from 'bem-cn'
-import { IProduct } from '../../types'
-
-import './Product.less'
+import { FC } from "react";
+import { IProduct } from "../../types";
+import styles from "./Product.module.less";
 
 interface IProductProps {
-  product: IProduct
+  product: IProduct;
 }
-
-const b = block('product')
 
 const Product: FC<IProductProps> = (props) => {
   const {
     product: { id, name, amount, category },
-  } = props
+  } = props;
 
-  const productString = `${id}. ${name} - ${amount}`
+  const productString = `${id}. ${name} - ${amount}`;
 
   return (
-    <div className={b()} title={category.name}>
+    <div className={styles.product} title={category.name}>
       {productString}
     </div>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;

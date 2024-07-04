@@ -1,25 +1,19 @@
 export interface IProduct {
-  id: number
-  name: string
-  amount: number
-  category: ICategory
+  id: number;
+  name: string;
+  amount: number;
+  category: ICategory;
 }
 
 export interface ICategory {
-  id: number
-  name: string
-}
-
-export enum IUserRole {
-  ADMIN = 'admin',
-  USER = 'user',
-  BOT = 'bot',
+  id: number;
+  name: string;
 }
 
 export interface IUser {
-  id?: number
-  username: string
-  email: string
-  password: string
-  role: IUserRole
+  id?: number;
+  username: string;
+  email: string;
+  password: string;
+  role: "admin" | "user" | "bot";
 }

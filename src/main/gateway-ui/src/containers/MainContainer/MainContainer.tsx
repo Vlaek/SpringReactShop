@@ -1,16 +1,12 @@
-import { FC, ReactNode } from 'react'
-import { block } from 'bem-cn'
-
-import './MainContainer.less'
+import { FC, ReactNode } from "react";
+import styles from "./MainContainer.module.less";
 
 type MainContainerProps = {
-  children: ReactNode
-}
-
-const b = block('main-container')
+  children: ReactNode;
+};
 
 const MainContainer: FC<MainContainerProps> = ({ children }) => {
-  return <div className={b()}>{children}</div>
-}
+  return <div className={styles.main_container}>{children}</div>;
+};
 
-export default MainContainer
+export default MainContainer;
