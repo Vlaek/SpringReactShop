@@ -9,4 +9,4 @@ const MainContainer: FC<MainContainerProps> = ({ children }) => {
   return <div className={styles.main_container}>{children}</div>;
 };
 
-export default MainContainer;
+export { MainContainer };

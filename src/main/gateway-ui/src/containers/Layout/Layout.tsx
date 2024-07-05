@@ -25,4 +25,4 @@ const Layout: FC<LayoutProps> = (props) => {
   );
 };
 
-export default Layout;
+export { Layout };
