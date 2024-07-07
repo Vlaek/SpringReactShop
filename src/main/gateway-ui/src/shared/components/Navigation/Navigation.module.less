@@ -1,0 +1,19 @@
+@import "../../styles/variables.less";
+
+.nav {
+  &__list {
+    display: flex;
+    column-gap: 35px;
+    list-style: none;
+
+    &__item {
+      color: @btn-color;
+      cursor: pointer;
+      min-width: 100px;
+
+      &:hover {
+        color: @btn-color-hover;
+      }
+    }
+  }
+}

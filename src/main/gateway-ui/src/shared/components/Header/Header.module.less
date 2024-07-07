@@ -1,17 +1,17 @@
+@import "../../styles/variables.less";
+
 .header {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #eee;
+  border-bottom: @border;
   padding: 0 50px;
 
   &__logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.2s 0s ease;
+    .flex-full-center;
+    transition: @transition;
     cursor: pointer;
 
     &:hover {
@@ -23,25 +23,25 @@
     margin-right: 15px;
     width: 35px;
     height: 35px;
-    color: #ebd834;
+    color: @btn-color-hover;
   }
 
   &__title {
     font-size: 25px;
     font-weight: bold;
-    color: #ebd834;
+    color: @btn-color-hover;
     user-select: none;
   }
 
   &__menu {
-    transition: all 0.2s 0s ease;
+    transition: @transition;
     cursor: pointer;
 
     &:hover {
       transform: scale(1.1);
     }
     &:hover {
-      color: #ebd834;
+      color: @btn-color-hover;
     }
   }
 }

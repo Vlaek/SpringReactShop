@@ -1,9 +1,7 @@
 import { FC, useEffect } from "react";
 import styles from "./UserList.module.less";
 import { useGetUsersQuery } from "../../../store/api/api";
-import { User } from "../User/User";
-import { Loader } from "../Loader/Loader";
-import { LoadingError } from "../LoadingError/LoadingError";
+import { Loader, LoadingError, User } from "@/shared/components";
 
 interface UserListProps {}
 
